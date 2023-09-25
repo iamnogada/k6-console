@@ -1,20 +1,23 @@
-import React from "react";
-import AceEditor from 'react-ace';
+import React, { useRef } from "react";
 
-import "ace-builds/src-noconflict/ace";
-import 'ace-builds/src-noconflict/mode-javascript';
-import 'ace-builds/src-noconflict/theme-monokai';
-
+import Editor from "@monaco-editor/react";
 
 function RunTest() {
-
+  const editorRef = useRef(null);
+  const handleEditorDidMount = (editor, monaco) => {
+    editorRef.current = editor;
+  };
   const initialCode = 'const message = "Hello, World!";';
   const handleCodeChange = (newCode) => {
     console.log(newCode);
   };
 
+  const handleRequest = async () => {
+    const result = await fetch("https://naver.com");
+    console.log("hi");
+  };
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
       <div>
         {/* Content for the first row */}
         <div className="flex space-x-4">
@@ -43,24 +46,23 @@ function RunTest() {
           <button
             type="submit"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={handleRequest}
           >
             Submit
           </button>
         </div>
       </div>
-      <div style={{ flex: 1, overflowY: "auto", backgroundColor: "white" }} className="mt-5">
+      <div
+        style={{ flex: 1,  backgroundColor: "white" }}
+        className="mt-5 border-gray-200 border-2 p-3"
+      >
         {/* Content for the second row with inner scroll */}
-        <div style={{ height: "100%" }}>
-        <AceEditor
-          mode="javascript"
-          theme="monokai"
-          value={initialCode}
-          onChange={handleCodeChange}
-          width="100%"
-          height="100%"
-          editorProps={{ $blockScrolling: true }}
-        />
-        </div>
+        <Editor
+        height="90vh"
+        defaultLanguage="javascript"
+        defaultValue="// some comment"
+        onMount={handleEditorDidMount}
+      />
       </div>
     </div>
   );

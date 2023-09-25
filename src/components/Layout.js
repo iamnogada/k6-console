@@ -5,7 +5,7 @@ function Layout({ children }) {
   const location = useLocation();
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-gray-100 mb-10">
       {/* <!-- Sidebar / Navigation --> */}
       <div className="bg-white w-64 p-6 hidden sm:block">
         <div className="text-xl mb-4 text-primary font-bold">
@@ -39,7 +39,7 @@ function Layout({ children }) {
         </header>
 
         {/* <!-- Content Area --> */}
-        <main className="flex-1 p-6 overflow-y-auto">{children}</main>
+        <main className="flex-grow p-6 mb-10">{children}</main>
       </div>
     </div>
   );
