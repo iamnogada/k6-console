@@ -14,13 +14,13 @@ function Layout({ children }) {
 
         <ul className="mt-14">
           <li className="mb-2">
-            <Link to="/runtest" className="text-primary font-semibold hover:text-gray-800">
-              Run Test
+            <Link to="/scripts" className=" text-primary font-semibold hover:text-gray-800">
+              Scripts
             </Link>
           </li>
           <li className="mb-2">
-            <Link to="/scripts" className=" text-primary font-semibold hover:text-gray-800">
-              Scripts
+            <Link to="/runtest" className="text-primary font-semibold hover:text-gray-800">
+              Run Test
             </Link>
           </li>
         </ul>

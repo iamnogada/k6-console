@@ -13,8 +13,9 @@ function RunTest() {
   };
 
   const handleRequest = async () => {
-    const result = await fetch("https://naver.com");
-    console.log("hi");
+    const result = await fetch("/api");
+    const body = await result.json();
+    console.log(body);
   };
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
