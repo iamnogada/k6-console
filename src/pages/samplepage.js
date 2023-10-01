@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import ColorSet from "../components/ui/ColorSet";
+import ColorSetUI from "../components/ui/ColorSetUI";
+import CardSet from "../components/ui/CardSet";
 
-function samplepage() {
+function SamplePage() {
   return (
-    <div>samplepage</div>
-  )
+    <div>
+      <h1 className="m-2 bg-gray-400">Sample Page</h1>
+      <ColorSet/>
+      <ColorSetUI/>
+      <CardSet/>
+    </div>
+  );
 }
 
-export default samplepage
+export default SamplePage;

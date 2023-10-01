@@ -6,19 +6,6 @@ import NewTodoInput from "../components/NewTodoInput";
 
 
 function NewTodoPage() {
-  // const [todos, setTodos] = useState([{"text":"Sample Todo 1"},{"text":"Sample todo 2"}]);
-  
-  // Callback to add a new todo
-  // const addTodo = (text) => {
-  //   setTodos([...todos, { text }]);
-  // };
-
-  // // Callback to delete a todo by index
-  // const deleteTodo = (index) => {
-  //   const newTodos = todos.filter((_, i) => i !== index);
-  //   console.log(newTodos);
-  //   setTodos(newTodos);
-  // };
 
   return (
     <div>
