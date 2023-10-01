@@ -59,7 +59,7 @@ function RunTest() {
       >
         {/* Content for the second row with inner scroll */}
         <Editor
-        height="90vh"
+        height="80vh"
         defaultLanguage="javascript"
         defaultValue="// some comment"
         onMount={handleEditorDidMount}

@@ -21,16 +21,19 @@ function DynamicPage() {
 
 function App() {
   return (
-    <>
+    <div className="h-screen">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DynamicPage />} />
           <Route path="/runtest" element={<DynamicPage />} />
-          <Route path="/scripts" element={<DynamicPage />} />
+          <Route path="/script" element={<DynamicPage />} />
+          <Route path="/sample" element={<DynamicPage />} />
+          <Route path="/todo" element={<DynamicPage />} />
+          <Route path="/newtodo" element={<DynamicPage />} />
           {/* And so on... */}
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
