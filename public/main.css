@@ -1,0 +1,71 @@
+/* Reset some default styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the Global Navigation Bar (GNB) */
+.gnb {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.gnb nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.gnb nav ul li {
+    margin-right: 20px;
+}
+
+.gnb nav ul li:last-child {
+    margin-right: 0;
+}
+
+.gnb nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Style the Container */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Style the Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style the Content Area with Scroll */
+.content {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scroll if content overflows */
+    border: 1px solid #ccc;
+}
+
+.scrollable-content {
+    max-height: 400px; /* Adjust the maximum height as needed */
+    overflow-y: auto; /* Enable scroll within content area */
+}
