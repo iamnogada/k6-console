@@ -21,7 +21,7 @@ function DynamicPage() {
 
 function App() {
   return (
-    <div>
+    <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DynamicPage />} />
@@ -30,7 +30,7 @@ function App() {
           {/* And so on... */}
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
